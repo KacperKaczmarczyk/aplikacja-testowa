@@ -1,7 +1,7 @@
 html {
   min-height: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow-y: hidden; }
 
 body {
   background-color: #EEEEEE;
@@ -22,28 +22,29 @@ h2 {
 
 table {
   margin-left: 20px;
-  width: 80%;
+  width: 1100px;
   border: 1px solid #1D89E4;
   border-spacing: 0px;
   max-height: 100px;
   text-align: left; }
 
 tr {
-  height: 40px;
-  border-bottom: 1px solid #A4ABBB; }
+  height: 50px;
+  border-bottom: 1px solid #A4ABBB;
+  padding-right: 20px; }
 
 tbody {
   max-height: 350px;
   display: block;
-  overflow-x: auto; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 thead, tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed; }
 
-input[type=submit],
-input[type=button] {
+input[type=submit], input[type=button] {
   border-radius: 3px;
   border: 0px;
   padding: 6px 12px;
@@ -72,16 +73,17 @@ input[type=submit]:hover {
   margin-left: -225px;
   height: 100%;
   min-width: 225px;
-  -webkit-box-shadow: inset 3px 0px 3px #CECECE;
-  -moz-box-shadow: inset 3px 0px 3px #CECECE;
-  box-shadow: inset 3px 0px 3px #CECECE;
+  -webkit-box-shadow: inset -2px 0px 3px #CECECE;
+  -moz-box-shadow: inset -2px 0px 3px #CECECE;
+  box-shadow: inset -2px 0px 3px #CECECE;
   position: relative; }
 
 #rightContainer {
   float: left;
   width: 100%;
   height: 100%;
-  right: 0; }
+  right: 0;
+  overflow-x: scroll; }
 
 #logo {
   margin-top: 15px;
@@ -106,7 +108,8 @@ input[type=submit]:hover {
   padding: 20px;
   margin: 0px;
   background-color: #FFFFFF;
-  border-bottom: 2px solid #CCCCCC; }
+  border-bottom: 2px solid #CCCCCC;
+  min-width: 1160px; }
 
 #wyloguj {
   align-self: right; }
@@ -118,12 +121,14 @@ input[type=submit]:hover {
   border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
-  border-bottom: 2px solid #CCCCCC; }
+  border-bottom: 2px solid #CCCCCC;
+  min-width: 1130px; }
 
 .menu-option {
   padding-top: 4px;
   padding-bottom: 4px;
   margin: 0px;
+  margin-right: 3px;
   border-top: 1px solid #40434A;
   font-size: 12px; }
 
@@ -157,13 +162,13 @@ input[type=submit]:hover {
 .col-head {
   margin: 0px;
   border-right: 1px solid white;
-  width: 22%;
+  width: 230px;
   padding-left: 10px;
   font-weight: normal; }
 
 .col {
   margin: 0px;
-  width: 22%;
+  width: 231px;
   padding-left: 10px;
   text-align: left; }
 
@@ -171,18 +176,17 @@ input[type=submit]:hover {
   text-align: center; }
 
 .col-editing {
-  width: 21.3%;
-  padding-left: 8.5px;
-  padding-top: 6px; }
+  width: 232px;
+  padding-left: 9px;
+  padding-top: 10.5px; }
 
 .col-editing-last {
   text-align: center;
-  width: 12%;
-  padding-top: 8px; }
+  padding-top: 13px;
+  padding-left: 9px; }
 
 .editing-form {
   display: flex;
-  width: 100%;
   background-color: #D2E7FA; }
 
 .input-editing {
@@ -192,20 +196,46 @@ input[type=submit]:hover {
   border: 1px solid #A4ABBB; }
 
 ::-webkit-scrollbar {
-  width: 20px;
-  height: 18px; }
+  width: 20px; }
 
 ::-webkit-scrollbar-thumb {
   height: 6px;
   border: 8px solid transparent;
   background-clip: padding-box;
-  -webkit-border-radius: 20px;
+  -webkit-border-radius: 40px;
   background-color: #1D89E4; }
+
+::-webkit-scrollbar-track {
+  display: none;
+  background-color: transaprent; }
 
 ::-webkit-scrollbar-corner {
   background-color: transparent; }
 
+a:link, a:visited {
+  color: white;
+  text-decoration: none; }
+
+a.menu-option-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 13px; }
+
 a:hover {
   cursor: pointer; }
+
+.ng-enter {
+  transition: 1s;
+  opacity: 0; }
+
+.ng-enter-active {
+  opacity: 1; }
+
+.ng-leave {
+  transition: 1s;
+  opacity: 1; }
+
+.ng-leave-active {
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,1 @@
-angular.module('aplikacjaTestowa', []);
+angular.module('aplikacjaTestowa', ['ngAnimate']);
