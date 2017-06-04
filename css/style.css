@@ -9,7 +9,14 @@ body {
   font-family: Arial, sense-serif;
   color: #3F444A;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  scrollbar-face-color: #1D89E4;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFF;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-arrow-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF; }
 
 h1 {
   font-size: 20px;

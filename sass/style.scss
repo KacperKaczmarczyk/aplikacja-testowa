@@ -19,6 +19,7 @@ $shadow-color: #CCCCCC;
 	-moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
 	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
 }
+
 html {
 	min-height: 100%;
 	position: relative;
@@ -32,6 +33,14 @@ body {
 	color: #3F444A;
 	width: 100%;
 	height: 100%;
+	
+	scrollbar-face-color: $button-head-color; 
+	scrollbar-highlight-color: $l-container-bg;
+	scrollbar-shadow-color: $l-container-bg; 
+	scrollbar-3dlight-color: $l-container-bg;
+	scrollbar-arrow-color: $l-container-bg; 
+	scrollbar-track-color: $l-container-bg;
+	scrollbar-darkshadow-color: $l-container-bg;
 }
 
 h1 {
