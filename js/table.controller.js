@@ -16,3 +16,4 @@ function tableController($scope, Items) {
   };
   
 }
+

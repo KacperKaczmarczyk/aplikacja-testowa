@@ -1,13 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<title>Aplikacja testowa</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=11"/>
 </head>
 
-<body ng-app="aplikacjaTestowa">
+<body id="ng-app" ng-app="aplikacjaTestowa">
 <div id="container" ng-controller="tableController">
 	<div id="leftContainer">
 		<div id="logo">LOGO</div>
@@ -78,8 +80,8 @@
 						<td class="col">{{row.column3}}</td>
 						<td class="col">{{row.column4}}</td>
 						<td class="col-last">
-						<a type="button" ng-click="editing = true"><i class="material-icons">mode_edit</i></a>				
-						<a type="button" ng-click="delete(row)"> <i class="material-icons" >delete</i></a>
+						<a ng-click="editing = true"><i class="material-icons">mode_edit</i></a>				
+						<a ng-click="delete(row)"> <i class="material-icons" >delete</i></a>
 						</td>
 					</tr>
 					<tr class="editing-form" ng-show="editing" ng-repeat-end>
@@ -107,7 +109,7 @@
 
 <script src="js/items.factory.js"></script>
 <script src="js/table.controller.js"></script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>
 
