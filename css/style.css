@@ -196,10 +196,11 @@ input[type=submit]:hover {
   border: 1px solid #A4ABBB; }
 
 ::-webkit-scrollbar {
-  width: 20px; }
+  width: 20px;
+  height: 20px; }
 
 ::-webkit-scrollbar-thumb {
-  height: 6px;
+  height: 10px;
   border: 8px solid transparent;
   background-clip: padding-box;
   -webkit-border-radius: 40px;
