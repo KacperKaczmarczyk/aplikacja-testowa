@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<meta charset="utf-8"/>
+</head>
+
+<body ng-app="aplikacjaTestowa">
+<div id="container" ng-controller="tableController">
+	<div id="leftContainer">
+		<div id="logo">LOGO</div>
+		<div id="nav">
+				<div class="menu-option"><i class="material-icons">home</i>Element1</div>
+				<div class="menu-option"><i class="material-icons">account_circle</i>Element2</div>
+				<div class="menu-option"><i class="material-icons">account_balance</i>Element3</div>
+		</div>
+	</div>
+	<div id="rightContainer">
+		<div id="topbar">
+			<div class=f-left>
+				<h1>APLIKACJA TESTOWA</h1>
+			</div>
+			<div class="f-right">
+				<input type="submit" name="wyloguj" id="wyloguj" value="Wyloguj">
+			</div>
+			<div style="clear:both"></div>
+		</div>
+
+		<div class="l-container"><h2>Zawartość</h2>
+			<div id="form">
+				<form ng-submit="submit()">
+					<div class="col-form">
+						<div>
+							<label for="kolumna1">Kolumna1:</label>
+							<input class="input-form" type="text" id="kolumna1" ng-model="newItem.column1">
+						</div>
+						<div>
+							<label for="kolumna2">Kolumna3:</label>
+							<input class="input-form" type="text" id="kolumna2" ng-model="newItem.column2">
+						</div>
+					</div>
+					<div class="col-form">
+						<div>
+							<label for="kolumna3">Kolumna2:</label>
+							<input class="input-form" type="text" id="kolumna3" ng-model="newItem.column3">
+						</div>
+						<div>
+							<label for="kolumna4">Kolumna4:</label>
+							<input class="input-form" type="text" id="kolumna4" ng-model="newItem.column4">
+						</div>
+					</div>
+					<div style="clear:both"> 
+						<input type="submit" name="submit" id="submit" value="Dodaj">
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="l-container">
+			<h2>Zawartość</h2>
+			<table>
+				<thead>
+					<tr class="row-head">
+						<th class="col-head">Kolumna1</th>
+						<th class="col-head">Kolumna2</th>
+						<th class="col-head">Kolumna3</th>
+						<th class="col-head">Kolumna4</th>
+						<th></th>	
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat-start='row in table' ng-hide="editing">
+						<td class="col">{{row.column1}}</td>
+						<td class="col">{{row.column2}}</td>
+						<td class="col">{{row.column3}}</td>
+						<td class="col">{{row.column4}}</td>
+						<td class="col-last">
+						<a type="button" ng-click="editing = true"><i class="material-icons">mode_edit</i></a>				
+						<a type="button" ng-click="delete(row)"> <i class="material-icons" >delete</i></a>
+						</td>
+					</tr>
+					<tr class="editing-form" ng-show="editing" ng-repeat-end>
+						<form ng-submit="editing = false">
+							<td class="col-editing"><input class="input-editing" type="text" ng-model="row.column1"/></td>
+							<td class="col-editing"><input class="input-editing" type="text" ng-model="row.column2"/></td>
+							<td class="col-editing"><input class="input-editing" type="text" ng-model="row.column3"/></td>
+							<td class="col-editing"><input class="input-editing" type="text" ng-model="row.column4"/></td>
+							<td class="col-editing-last">
+							<a type="button" ng-click="editing = false"><i class="material-icons">save</i></a>
+							<a type="button" ng-click="delete(row)"> <i class="material-icons" >delete</i></a>
+							</td>
+						</form>
+					</tr>
+				</tbody>		
+			</table>
+		</div>
+		
+	</div>
+	<div style="clear:both"></div>
+</div>
+<script src="lib/angular.min.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="js/items.factory.js"></script>
+<script src="js/table.controller.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
+
